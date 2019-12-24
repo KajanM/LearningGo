@@ -26,4 +26,15 @@ func main() {
 
 	ptr := &firstName
 	fmt.Println(ptr, *ptr)
+
+	const pi = 3.1416
+
+	fmt.Println(3 + pi)
+	fmt.Println(3.2 + pi)
+
+	const c int = 3
+
+	fmt.Println(3 + c)
+	fmt.Println(3.2 + float32(c))
+
 }
