@@ -19,4 +19,11 @@ func main() {
 
 	l, m := complex(1, 2), complex(2, 1)
 	fmt.Println(l, m)
+
+	var secondName *string = new(string)
+	*secondName = "Kevin"
+	fmt.Println(*secondName)
+
+	ptr := &firstName
+	fmt.Println(ptr, *ptr)
 }
