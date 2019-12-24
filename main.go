@@ -10,6 +10,10 @@ const (
 	third
 )
 
+const (
+	fourth = iota
+)
+
 func main() {
 	fmt.Println("Hello World")
 
@@ -43,5 +47,5 @@ func main() {
 	fmt.Println(3 + c)
 	fmt.Println(3.2 + float32(c))
 
-	fmt.Println(first, second, third)
+	fmt.Println(first, second, third, fourth)
 }
