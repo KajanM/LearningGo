@@ -4,6 +4,11 @@ import (
 	"fmt"
 )
 
+const (
+	first  = 1
+	second = "second"
+)
+
 func main() {
 	fmt.Println("Hello World")
 
@@ -37,4 +42,5 @@ func main() {
 	fmt.Println(3 + c)
 	fmt.Println(3.2 + float32(c))
 
+	fmt.Println(first, second)
 }
