@@ -16,4 +16,7 @@ func main() {
 
 	firstName := "Mike"
 	fmt.Println(firstName)
+
+	l, m := complex(1, 2), complex(2, 1)
+	fmt.Println(l, m)
 }
