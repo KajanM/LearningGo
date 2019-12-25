@@ -4,7 +4,28 @@ import "fmt"
 
 func main() {
 	//workingWithSlices()
-	workingWithMaps()
+	//workingWithMaps()
+	workingWithStructs()
+}
+
+func workingWithStructs() {
+	type user struct {
+		Id        int
+		FirstName string
+		LastName  string
+	}
+
+	var u user
+	u.Id = 1
+	u.FirstName = "Panda"
+	u.LastName = "Karady"
+	fmt.Println(u)
+
+	u2 := user{Id: 1,
+		FirstName: "Panda",
+		LastName:  "Karady",
+	}
+	fmt.Println(u2)
 }
 
 func workingWithMaps() {
