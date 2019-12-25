@@ -15,6 +15,6 @@ func main() {
 	}
 	fmt.Println(u)
 
-	port2, err := theory.StartWebServer(3000)
-	fmt.Println(port2, err)
+	_, err := theory.StartWebServer(3000)
+	fmt.Println(err)
 }
