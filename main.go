@@ -1,17 +1,11 @@
 package main
 
 import (
-	"fmt"
-
-	"github.com/kajanm/learningGo/models"
+	"github.com/kajanm/learningGo/controllers"
+	"net/http"
 )
 
 func main() {
-	u := models.User{
-		FirstName: "Panda",
-		LastName:  "Karady",
-	}
-	fmt.Println(u)
-	u2, err := models.AddUser(u)
-	fmt.Println(u2, err)
+	controllers.RegisterControllers()
+	http.ListenAndServe(":3000", nil)
 }
