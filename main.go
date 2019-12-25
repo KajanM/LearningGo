@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/kajanm/learningGo/models"
+	"github.com/kajanm/learningGo/theory"
 )
 
 func main() {
@@ -13,4 +14,7 @@ func main() {
 		LastName:  "Karady",
 	}
 	fmt.Println(u)
+
+	err := theory.StartWebServer(3000)
+	fmt.Println(err)
 }
