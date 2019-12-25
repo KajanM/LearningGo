@@ -1,16 +1,30 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
-	var arr [3]int
-	arr[0] = 1
-	arr[1] = 2
-	arr[2] = 3
-	fmt.Println(arr)
+	workingWithSlices()
 
-	arr2 := [3]int{1, 2, 3}
-	fmt.Println(arr2)
+}
+
+func workingWithSlices() {
+	arr := [3]int{1, 2, 3}
+	slice := arr[:]
+
+	fmt.Println(arr, slice)
+
+	arr[1] = 42
+	slice[2] = 27
+
+	fmt.Println(arr, slice)
+
+	slice2 := []int{1, 2, 3}
+	slice2 = append(slice2, 10, 11, 12)
+
+	fmt.Println(slice2)
+
+	slice3 := slice2[1:]
+	slice4 := slice2[:2]
+	slice5 := slice2[1:2]
+	fmt.Println(slice3, slice4, slice5)
 }
