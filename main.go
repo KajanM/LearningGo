@@ -4,17 +4,14 @@ import (
 	"fmt"
 
 	"github.com/kajanm/learningGo/models"
-	"github.com/kajanm/learningGo/theory"
 )
 
 func main() {
 	u := models.User{
-		Id:        2,
 		FirstName: "Panda",
 		LastName:  "Karady",
 	}
 	fmt.Println(u)
-
-	_, err := theory.StartWebServer(3000)
-	fmt.Println(err)
+	u2, err := models.AddUser(u)
+	fmt.Println(u2, err)
 }
