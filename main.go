@@ -3,8 +3,20 @@ package main
 import "fmt"
 
 func main() {
-	workingWithSlices()
+	//workingWithSlices()
+	workingWithMaps()
+}
 
+func workingWithMaps() {
+	m := map[string]int{"foo": 1, "bar": 2}
+	fmt.Println(m)
+	fmt.Println(m["foo"])
+
+	m["foo"] = 32
+	fmt.Println(m)
+
+	delete(m, "foo")
+	fmt.Println(m)
 }
 
 func workingWithSlices() {
