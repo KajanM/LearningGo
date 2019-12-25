@@ -21,9 +21,6 @@ func GetUsers() []*User {
 }
 
 func AddUser(user User) (User, error) {
-	if user.Id == 0 {
-		return User{}, errors.New("new User must not include id")
-	}
 	user.Id = nextId
 	nextId++
 	users = append(users, &user)
@@ -45,12 +42,12 @@ func UpdateUser(u User) (User, error) {
 		return User{}, errors.New("id is required")
 	}
 	for i, candidate := range users {
-		if candidate.Id == id {
+		if candidate.Id == u.Id {
 			users[i] = &u
 			return u, nil
 		}
 	}
-	return User{}, fmt.Errorf("could not find a user with id '%v'", id)
+	return User{}, fmt.Errorf("could not find a user with id '%v'", u.Id)
 }
 
 func RemoveUserById(id int) error {
